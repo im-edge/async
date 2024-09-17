@@ -96,6 +96,6 @@ class Retry
             $e->getMessage(),
             $e->getFile(),
             $e->getLine()
-        ) . $e->getTraceAsString());
+        ));
     }
 }

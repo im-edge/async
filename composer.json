@@ -28,6 +28,7 @@
         "revolt/event-loop": "^1.0"
     },
     "require-dev": {
+        "amphp/amp": "^3",
         "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^10.3",
         "squizlabs/php_codesniffer": "^3.7",

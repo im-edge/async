@@ -88,15 +88,6 @@ class RetryingFuture
             $e->getFile(),
             $e->getLine()
         ));
-echo sprintf(
-            "%s still failing after %.2fs, slowing down to one attempt every %.2fs: %s (%s:%d)\n",
-            $this->label,
-            $this->burstDuration,
-            $this->retryIntervalSeconds,
-            $e->getMessage(),
-            $e->getFile(),
-            $e->getLine()
-        );
     }
 
     protected function setInitialError(Throwable $e): void
@@ -110,14 +101,6 @@ echo sprintf(
             $e->getFile(),
             $e->getLine()
         ));
-echo sprintf(
-            "%s failed, I'll continue to retry every %.2fs: %s (%s:%d)\n",
-            $this->label,
-            $this->currentRetryInterval,
-            $e->getMessage(),
-            $e->getFile(),
-            $e->getLine()
-        );
     }
 
     protected function assertParametersAreValid(): void
